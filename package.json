@@ -1,0 +1,21 @@
+{
+    "name": "grailed-sql",
+    "version": "0.0.1",
+    "description": "Scripts to resolve username collisions and blacklisted usernames",
+    "main": "index.js",
+    "scripts": {
+        "findDisallowed": "cross-env node --eval \"require(\"\"./src/index.js\"\").findDisallowed()\"",
+        "resolveDisallowed": "cross-env node --eval \"require(\"\"./src/index.js\"\").resolveDisallowed()\"",
+        "resolveDisallowed:dryrun": "cross-env DRY_RUN=\"true\" node --eval \"require(\"\"./src/index.js\"\").resolveDisallowed()\"",
+        "resolveDuplicates": "cross-env node --eval \"require(\"\"./src/index.js\"\").resolveDuplicates()\"",
+        "resolveDuplicates:dryrun": "cross-env DRY_RUN=\"true\" node --eval \"require(\"\"./src/index.js\"\").resolveDuplicates()\""
+    },
+    "author": "Andrew Hang",
+    "license": "ISC",
+    "dependencies": {
+        "sqlite3": "^4.0.9"
+    },
+    "devDependencies": {
+        "cross-env": "^5.2.0"
+    }
+}
